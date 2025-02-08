@@ -1,6 +1,10 @@
 import { useEffect } from 'react';
 import './App.css'
 import axios from 'axios';
+import {Routes , Route, BrowserRouter} from 'react-router-dom';
+import Body from './components/Body';
+import AuthPage from './components/AuthPage';
+import Home from './components/Home';
 
 axios.defaults.baseURL = 'http://localhost:5000';
 
@@ -18,9 +22,14 @@ function App() {
 
   return (
     <>
-      <div>
-        Hello world
-      </div>
+      <BrowserRouter basename='/'>
+        <Routes>
+          <Route path = '/' element = {<Body/>}>
+            <Route path='/auth' element={<AuthPage />} />
+            <Route path='/home' element={<Home />} />
+          </Route>
+        </Routes>
+      </BrowserRouter>
     </>
   );
 }
