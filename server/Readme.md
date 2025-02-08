@@ -12,5 +12,5 @@
 #### Mongoose - Elegant library for Connecting our Node application to mongoDb Database
 - install mongoose (use docs)
 - create folder config > databse.js 
-- and connect to db 
+- and connect to db(updated password of mongodb) 
 
